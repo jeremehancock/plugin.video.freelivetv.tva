@@ -1,2 +1,4 @@
 # plugin.video.freelivetv.tva
-Free Live TV
+## Submit issues via m7 Kodi Addons
+
+[m7_kodi_addons](https://m7kodi.dev)
