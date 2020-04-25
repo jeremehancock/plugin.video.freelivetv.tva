@@ -50,8 +50,8 @@ class Channels:
         try:
             # Generate Channel List within given genre
             for channel in m7lib.Common.get_channels():
-                if genre in channel["type"]:
-                    m7lib.Common.add_channel(channel["name"], m7lib.Common.get_logo(channel["name"]), fanart)
+                if genre in channel["genre"]:
+                    m7lib.Common.add_channel(channel["slug"], channel["endpoints"]["poster"], fanart, channel["name"], True)
         except StandardError:
             dlg_oops(addon_name)
 
@@ -60,7 +60,7 @@ class Channels:
         try:
             # Generate Channel List
             for channel in m7lib.Common.get_channels():
-                m7lib.Common.add_channel(channel["name"], m7lib.Common.get_logo(channel["name"]), fanart)
+                m7lib.Common.add_channel(channel["slug"], channel["endpoints"]["poster"], fanart, channel["name"], True)
         except StandardError:
             dlg_oops(addon_name)
 
