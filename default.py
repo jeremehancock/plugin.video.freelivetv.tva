@@ -24,16 +24,7 @@ mode = FreeLiveTV().plugin_queries['mode']
 
 if mode is "main":
     tvaddons_branding()
-    Channels.section_list()
-
-elif mode == "All Channels":
     Channels.channel_list()
-
-elif mode == "Genres":
-    Channels.genres_list()
-
-elif mode in m7lib.Common.get_genres():
-    Channels.genre_list(mode)
 
 else:
     Channels.get_channel(mode)

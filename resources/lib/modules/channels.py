@@ -28,34 +28,6 @@ import m7lib
 class Channels:
 
     @staticmethod
-    def section_list():
-        try:
-            #Generate Section List
-            for section in sorted(m7lib.Common.get_sections()):
-                m7lib.Common.add_section(section, m7lib.Common.get_logo(section, "section"), fanart)
-        except StandardError:
-            dlg_oops(addon_name)
-
-    @staticmethod
-    def genres_list():
-        try:
-            # Generate Genre List
-            for genre in sorted(m7lib.Common.get_genres()):
-                m7lib.Common.add_section(genre, m7lib.Common.get_logo(genre, "genre"), fanart)
-        except StandardError:
-            dlg_oops(addon_name)
-
-    @staticmethod
-    def genre_list(genre):
-        try:
-            # Generate Channel List within given genre
-            for channel in m7lib.Common.get_channels():
-                if genre in channel["genre"]:
-                    m7lib.Common.add_channel(channel["slug"], channel["endpoints"]["poster"], fanart, channel["name"], True)
-        except StandardError:
-            dlg_oops(addon_name)
-
-    @staticmethod
     def channel_list():
         try:
             # Generate Channel List
