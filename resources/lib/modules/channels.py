@@ -31,8 +31,8 @@ class Channels:
     def channel_list():
         try:
             # Generate Channel List
-            for channel in m7lib.Common.get_channels():
-                m7lib.Common.add_channel(channel["slug"], channel["endpoints"]["poster"], fanart, channel["name"], True)
+            for channel in sorted(m7lib.Common.get_channels()):
+                m7lib.Common.add_channel(channel["slug"], channel["poster"], fanart, channel["name"], True)
         except StandardError:
             dlg_oops(addon_name)
 
