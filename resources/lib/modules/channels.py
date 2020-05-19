@@ -1,6 +1,7 @@
 """
     Free Live TV Add-on
     Developed by mhancoc7
+    https://patreon.m7kodi.dev
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
