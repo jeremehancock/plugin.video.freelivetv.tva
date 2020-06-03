@@ -33,7 +33,7 @@ class Channels:
         try:
             # Generate Channel List
             for channel in sorted(m7lib.Common.get_channels()):
-                m7lib.Common.add_channel(channel["slug"], channel["poster"], fanart, channel["name"], True)
+                m7lib.Common.add_channel(channel["slug"], channel["poster"], fanart, channel["name"].encode(encoding='UTF-8', errors='strict'), True)
         except StandardError:
             dlg_oops(addon_name)
 
