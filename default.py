@@ -25,7 +25,11 @@ mode = FreeLiveTV().plugin_queries['mode']
 
 if mode is "main":
     patreon_notify()
+    m7lib.Common.add_section("search-channels", search_icon, fanart, get_string(9007))
     Channels.channel_list()
+
+elif mode == "search-channels":
+    Channels.search_list()
 
 else:
     Channels.get_channel(mode)

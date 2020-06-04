@@ -38,6 +38,25 @@ class Channels:
             dlg_oops(addon_name)
 
     @staticmethod
+    def search_list():
+        try:
+            # Generate Channel List from search query
+            retval = dlg.input(get_string(9007), type=xbmcgui.INPUT_ALPHANUM)
+            if retval and len(retval) > 0:
+                search_list = m7lib.Common.search_channels(retval)
+                if len(search_list) > 1:
+                    for channel in sorted(search_list):
+                        m7lib.Common.add_channel(channel["slug"], channel["poster"], fanart, channel["name"].encode(encoding='UTF-8', errors='strict'), True)
+                else:
+                    dlg.ok(addon_name, get_string(9008))
+                    exit()
+            else:
+                dlg.ok(addon_name, get_string(9009))
+                exit()
+        except StandardError:
+            dlg_oops(addon_name)
+
+    @staticmethod
     def get_channel(mode):
         try:
             m7lib.Common.get_stream_and_play(mode)
