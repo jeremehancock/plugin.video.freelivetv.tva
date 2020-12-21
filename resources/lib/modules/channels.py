@@ -44,7 +44,7 @@ class Channels:
             retval = dlg.input(get_string(9007), type=xbmcgui.INPUT_ALPHANUM)
             if retval and len(retval) > 0:
                 search_list = m7lib.Common.search_channels(retval)
-                if len(search_list) > 1:
+                if len(search_list) > 0:
                     for channel in sorted(search_list):
                         m7lib.Common.add_channel(channel["slug"], channel["poster"], fanart, channel["name"].encode(encoding='UTF-8', errors='strict'), True)
                 else:
