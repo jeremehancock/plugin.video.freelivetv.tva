@@ -23,7 +23,7 @@ import xbmcplugin
 
 mode = FreeLiveTV().plugin_queries['mode']
 
-if mode is "main":
+if mode == "main":
     patreon_notify()
     m7lib.Common.add_section("search-channels", search_icon, fanart, get_string(9007))
     Channels.channel_list()
