@@ -1,3 +1,6 @@
+[B]Version 0.7.1[/B]
+- Fixed VPN message typo
+
 [B]Version 0.6.9[/B]
 - Updated for Kodi 19
 

@@ -31,7 +31,7 @@ msgid "Support Free Live TV:"
 msgstr ""
 
 msgctxt "#9005"
-msgid "If you are outside the USA, you might want to consider subscribing to a VPN service in order to take full advantage of this addon.[/COLOR]"
+msgid "If you are outside the USA, you might want to consider subscribing to a VPN service in order to take full advantage of this addon."
 msgstr ""
 
 msgctxt "#9006"
